@@ -1,0 +1,42 @@
+.form-wrapper {
+  width: 65%;
+  margin: 0 auto;
+}
+
+.newTweet textarea[name=text] {
+  width: 100%;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid #555149;
+  outline: none;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: left;
+  padding-left: 5px;
+  padding-right: 10px;
+  border-bottom-color: #555149;
+  font-family: 'Bungee', cursive;
+}
+
+.newTweet input[type=submit] {
+  background-color: #4056A1;
+  color: #ffffff;
+  font-family: 'Bungee', cursive;
+  width: 70px;
+  height: 30px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 0 5px #2a90ab;
+  float: left;
+}
+
+.counter {
+  color: #555149;
+  font-family: 'Bungee', cursive;
+  float: right;
+}
+
+

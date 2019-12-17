@@ -1,0 +1,37 @@
+nav {
+  position: sticky;
+  height: 120px;
+  width: 100%;
+  z-index: 7;
+  background-color: #4056A1;
+  color: #ffffff;
+}
+
+nav .fa {
+  display: block;
+  text-align: center;
+  margin-top: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;  
+  cursor: pointer;
+}
+
+nav a:hover .fa {
+  margin-top: 3px;
+  transition: 200ms margin ease-in-out;
+}
+
+
+nav span {
+  margin: 1.5em;
+  font-family: 'Bungee', cursive;
+  float: left;
+  font-size: 40px;
+}
+nav a {
+  font-size: 27px;
+  margin: 1.5em;
+}
