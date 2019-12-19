@@ -7,7 +7,7 @@
   width: 100%;
   border: none;
   background: transparent;
-  border-bottom: 2px solid #555149;
+  border-bottom: 4px solid #555149;
   outline: none;
   font-weight: bold;
   font-size: 16px;
@@ -22,8 +22,8 @@
   background-color: #4056A1;
   color: #ffffff;
   font-family: 'Bungee', cursive;
-  width: 70px;
-  height: 30px;
+  width: 80px;
+  height: 35px;
   text-align: center;
   padding: 5px;
   border-radius: 5px;
@@ -39,4 +39,10 @@
   float: right;
 }
 
+.red {
+  color: red;
+}
 
+.newTweet input[type=submit]:hover {
+  box-shadow: 1px 2px 1px 2px  #4056A1;
+}
