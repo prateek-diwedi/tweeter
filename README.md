@@ -15,3 +15,20 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- body-parser : "^1.15.2"
+- chance : "^1.0.2",
+- express : "^4.13.4",
+- md5 : "^2.1.0",
+- moment: "^2.24.0"
+
+## PORT
+
+- 8080
+
+## Screenshots
+
+!["Home Page Without Tweet Text Box"](https://github.com/prateek-diwedi/tweeter/blob/master/docs/home-page-without-text-box.png)
+
+!["Home Page With Tweet Text Box"](https://github.com/prateek-diwedi/tweeter/blob/master/docs/Home-page-with-text-input.png)
+
+!["Page With Error Message"](https://github.com/prateek-diwedi/tweeter/blob/master/docs/page-with-error-msg-png.png)
