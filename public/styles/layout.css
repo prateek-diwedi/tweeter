@@ -45,6 +45,49 @@ main {
   padding-left: 3%;
 }
 
+#up-arrow {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #4056A1;
+  background: #4056A1;
+  width: 50px;
+  height: 50px;
+  display: block;
+  text-decoration: none;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+  display: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#up-arrow i {
+  color: #fff;
+  margin: 0;
+  position: relative;
+  left: 16px;
+  top: 13px;
+  font-size: 19px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#up-arrow:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+#eu-arrow:hover i {
+  color: #fff;
+  top: 5px;
+}
+
 
 
 /*

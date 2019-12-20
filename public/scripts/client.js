@@ -96,6 +96,22 @@ $(document).ready(function(event) {
 
   };
 
+  /// scroll top button ---->>>
+  // ===== Scroll to Top ==== 
+$(window).scroll(function() {
+  if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+      $('#up-arrow').fadeIn(200);    // Fade in the arrow
+  } else {
+      $('#up-arrow').fadeOut(200);   // Else fade out the arrow
+  }
+});
+$('#up-arrow').click(function() {      // When arrow is clicked
+  $('body,html').animate({
+      scrollTop : 0                       // Scroll to top of body
+  }, 500);
+});
+
+
   function renderTweets(tweets) {
     tweets.forEach((tweet, idx) => {
       //console.log('tweet ---->>>', tweet);
