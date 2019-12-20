@@ -17,6 +17,11 @@ $(document).ready(function (event) {
 
   loadTweets();
 
+  //// animation to get tweet text place disappear --->>>
+  $('#hiding-button').on('click', function() {
+    if ($('#form').css('opacity') == 1) $('#form').css('opacity', 0);
+    else $('#form').css('opacity', 1);
+});
 
   /// ajax  ----->>>
   $(function () {
@@ -31,22 +36,19 @@ $(document).ready(function (event) {
       console.log('new data length', newData.length)
       console.log('data', data);
       if (newData === "" || newData === null || newData === " "){
-        $('.alert-box').text(" ⚠️    Please enter a data ⚠️    ").slideDown();
+        $('.alert-box').text(" ⚠️    Please enter a data ⚠️    ").slideDown().fadeOut(2000);
       } else if ( newData.length > 140){
-        $('.alert-box').text(" ⚠️    Your text is exceeding the limit of 140!    ⚠️").slideDown();
+        $('.alert-box').text(" ⚠️    Your text is exceeding the limit of 140!    ⚠️").slideDown().fadeOut(2000);
       } else  {
-        $('.alert-box').slideUp();
       $.ajax('/tweets', { method: 'POST', data: data })
         .then(function () {
           loadTweets();
           $('textarea').focus().val('');
-          $('.alert-box').slideUp();
         });
       }
 
     });
   });
-
 
 
 

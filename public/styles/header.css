@@ -2,7 +2,29 @@ header {
   text-align:center;
   height: 450px;
   width: 100%;
-  padding-top: 2em;
-  background-color: #cc8800;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  padding-left: 4%;
+  padding-right: 4%;
+  display: grid;
+  background-color: #4056A1;
+  background-image: url("https://www.transparenttextures.com/patterns/light-wool.png");
+  
+}
+
+ 
+
+/* background-color: #005096;
+background-image: url("https://www.transparenttextures.com/patterns/light-wool.png"); */
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+
+
+/* tablet style  ----->> */
+@media only screen and (min-width: 768px) and (max-width: 1024px ) {
+
+  header {
+    text-align:center;
+    height: 350px;
+    width: 100%;
+    display: inherit;
+  }
+
 }

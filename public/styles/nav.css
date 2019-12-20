@@ -35,3 +35,19 @@ nav a {
   font-size: 27px;
   margin: 1.5em;
 }
+
+
+/* tablet style  ----->> */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+  nav {
+    position: sticky;
+    height: 120px;
+    width: 100%;
+    z-index: 7;
+    background-color: #4056A1;
+    background-image: url("https://www.transparenttextures.com/patterns/light-wool.png");
+    color: #ffffff;
+  }
+  
+}

@@ -10,6 +10,9 @@ html {
   box-sizing: inherit;
 }
 
+#form {
+  opacity: 0;
+}
 /*
  * Global layout stuff
  */
@@ -19,6 +22,7 @@ body {
   background-color: #f4f1ec;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 24px;
+  
 }
 
 main {
@@ -35,7 +39,42 @@ main {
   font-size: 37px;
 }
 
+.divide-screen {
+  display: flex;
+  width: 100%;
+  padding-left: 3%;
+}
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+
+ /* tablet style  ----->> */
+ @media only screen and (min-width: 768px) and (max-width: 1024px ) {
+
+  
+   
+   .divide-screen {
+    display: inherit;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  main {
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    background-color: #f4f1ec;
+  }
+
+  .alert-box {
+    border: 3px solid red;
+    display: none;
+    font-weight: 800;
+    font-size: 37px;
+  }
+ }
+
+
+ 

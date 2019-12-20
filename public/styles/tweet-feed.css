@@ -21,7 +21,7 @@
 
 .tweet-box {
   border: 4px solid #555149;
-  margin-top: 20px;
+  margin-top: 50px;
   margin-bottom: 20px;
   padding-left: 2%;
   padding-right: 2%;
@@ -70,6 +70,7 @@
 
 .footer-icon i {
   color: #4055A1;
+  padding-right: 7px;
 }
 
 .footer-icon i:hover {
@@ -85,3 +86,23 @@
 .tweet-box:hover .handle {
   display: block;
 }
+
+
+/* tablet style  ----->> */
+/* @media only screen and (min-width: 768px and max-width: 1024px ) {
+
+  .tweet-container {
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 4%;
+  }
+    
+  .tweet-box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 2%;
+    padding-right: 2%;
+    flex: 1;
+    flex-direction: column;
+  }
+} */
