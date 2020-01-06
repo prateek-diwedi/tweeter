@@ -7,52 +7,49 @@
 // Test / driver code (temporary). Eventually will get this from the server.
 
 
-$(document).ready(function(event) {
+$(document).ready(function (event) {
   /// load tweet ------>>>>>
-  const loadTweets = function() {
+  const loadTweets = function () {
     $.ajax({
       url: '/tweets'
-    }).then(renderTweets);
+    })
+      .then(renderTweets);
   };
 
   loadTweets();
 
   //// animation to get tweet text place disappear --->>>
-  $('#hiding-button').on('click', function() {
+  $('#hiding-button').on('click', function () {
     if ($('#form').css('opacity') == 1) $('#form').css('opacity', 0);
     else $('#form').css('opacity', 1);
   });
 
   /// ajax  ----->>>
-  $(function() {
+  $(function () {
     const $form = $('.newTweet');
     console.log("form data here---->>>", $("#text-input"));
 
-    $form.on('submit', function(event) {
-      console.log('Button clicked, sending Tweet to server...');
+    $form.on('submit', function (event) {
       event.preventDefault();
       let data = $form.serialize();
       let newData = $(this).find('textarea').val();
-      console.log('new data length', newData.length);
-      console.log('data', data);
       if (newData === "" || newData === null || newData === " ") {
         $('.alert-box').text(" ⚠️    Please enter a data ⚠️    ").slideDown().fadeOut(2000);
       } else if (newData.length > 140) {
-        $('.alert-box').text(" ⚠️    Your text is exceeding the limit of 140!    ⚠️").slideDown().fadeOut(2000);
-      } else  {
+        $('.alert-box').text(" ⚠️    Your text is exceeding the limit of 140!    ⚠️ ").slideDown().fadeOut(2000);
+      } else {
         $.ajax('/tweets', { method: 'POST', data: data })
-          .then(function() {
+          .then(function () {
             loadTweets();
             $('textarea').focus().val('');
           });
       }
-
     });
   });
 
 
 
-  const createTweetElement = function({ user, content, created_at }) {
+  const createTweetElement = function ({ user, content, created_at }) {
     let article = $('<article>').addClass('tweet-box');
     let divTweetOne = $('<div>').addClass('tweet-one');
     let divUserDetails = $('<div>').addClass("user-details");
@@ -98,21 +95,22 @@ $(document).ready(function(event) {
 
   /// scroll top button ---->>>
   // ===== Scroll to Top ==== 
-$(window).scroll(function() {
-  if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+  $(window).scroll(function () {
+    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
       $('#up-arrow').fadeIn(200);    // Fade in the arrow
-  } else {
+    } else {
       $('#up-arrow').fadeOut(200);   // Else fade out the arrow
-  }
-});
-$('#up-arrow').click(function() {      // When arrow is clicked
-  $('body,html').animate({
-      scrollTop : 0                       // Scroll to top of body
-  }, 500);
-});
+    }
+  });
+  $('#up-arrow').click(function () {      // When arrow is clicked
+    $('body,html').animate({
+      scrollTop: 0                       // Scroll to top of body
+    }, 500);
+  });
 
 
   function renderTweets(tweets) {
+    $('#tweet-container').empty();
     tweets.forEach((tweet, idx) => {
       //console.log('tweet ---->>>', tweet);
       const $tweet = createTweetElement(tweet);
